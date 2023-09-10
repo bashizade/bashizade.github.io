@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./assets/output.css" rel="stylesheet" />
   </head>
-  <body >
+  <body class="scroll-smooth">
+
+    <div class="bg-base-300 fixed top-0 z-50 flex justify-center space-x-5 py-5 w-full">
+      <a href="#Me">Me</a>
+      <a href="#Experience">Experience</a>
+      <a href="#Skills">Skills</a>
+      <a href="#Portfolio">Portfolio</a>
+      <a href="#Contact">Contact</a>
+    </div>
+
+
+
     <div class="flex flex-col items-center">
-      <div class="md:w-10/12 pt-24">
-        <div class="md:grid grid-cols-2 gap-2 mb-16">
+      <div class="md:w-10/12 pt-36 h-screen">
+        <div class="md:grid grid-cols-2 gap-2 mb-32" id="Me">
           <div class="flex justify-center">
             <div
               class="bg-base-200 rounded-t-full w-1/2"
@@ -22,15 +33,13 @@
           </div>
           <div>
             <div class="flex flex-col justify-center h-full p-3 md:p-1">
-              <p class="text-4xl">Hello I'm</p>
+              <p class="text-4xl" id="hello_write"></p>
               <h1 class="text-7xl">Amirhosein Bashizade</h1>
-              <p class="pr-12">
-                I am 23 years old, I have been working in the web field for
-                almost 5 years. I like reading books, listening to music,
-                playing games, socializing with people. I hope I can help you .
+              <p class="pr-12" id="write">
+                
               </p>
               
-              <div class="flex space-x-2 mt-5">
+              <span class="flex space-x-8 mt-5 overflow-hidden bg-base-300 p-2 w-96 rounded-3xl ">
                 <div>
                     <a href="https://github.com/bashizade" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-github w-10 h-10" viewBox="0 0 16 16"> <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> </svg>
@@ -56,219 +65,155 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter w-10 h-10" viewBox="0 0 16 16"> <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/> </svg>
                     </a>
                 </div>
-              </div>
+              </span>
             </div>
           </div>
         </div>
-        <div class="w-full mb-16">
-          <div class="text-center mb-8">
-            <span class="text-4xl text-center border-b-4 border-blue-800"
-              >My services</span
-            >
-          </div>
-          <div
-            class="flex flex-col space-x-2 p-3 md:p-0 md:grid grid-cols-4 gap-4"
-          >
-            <div class="card bg-base-200 shadow-xl">
-              <figure class="px-10 pt-10 flex justify-center">
-                <img
-                  src="./assets/images/style-icon.png"
-                  alt="Shoes"
-                  class="rounded-xl w-10 h-10"
-                />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="card-title">beautiful design</h2>
-                <p>Using attractive elements and colors suitable for you.</p>
-              </div>
-            </div>
-            <div class="card bg-base-200 shadow-xl">
-              <figure class="px-10 pt-10 flex justify-center">
-                <img
-                  src="./assets/images/seo-icon.png"
-                  alt="Shoes"
-                  class="rounded-xl w-10 h-10"
-                />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="card-title">High SEO</h2>
-                <p>Coding your website with new standards</p>
-              </div>
-            </div>
-            <div class="card bg-base-200 shadow-xl">
-              <figure class="px-10 pt-10 flex justify-center">
-                <img
-                  src="./assets/images/programming-icon.png"
-                  alt="Shoes"
-                  class="rounded-xl"
-                />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="card-title">Safe programming</h2>
-                <p>We coding your website using the latest tools</p>
-              </div>
-            </div>
-            <div class="card bg-base-200 shadow-xl">
-              <figure class="px-10 pt-10 flex justify-center">
-                <img
-                  src="./assets/images/support-icon.png"
-                  alt="Shoes"
-                  class="rounded-xl"
-                />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="card-title">Support</h2>
-                <p>We will do our best to help you</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-fullu mb-16">
+        
+        <div class="w-full mb-16 h-screen" id="Experience">
           <div class="text-center mb-8">
             <span class="text-4xl text-center border-b-4 border-blue-800"
               >My Experience</span
             >
           </div>
-          <div class="flex justify-center">
-            <ul class="steps steps-vertical">
-              <li class="step step-primary">
-                <div>
-                  <p class="text-left">2018 - 2019</p>
-                  <p class="text-left">freelancer - web developer(back-end)</p>
-                </div>
-              </li>
-              <li class="step step-primary">
-                <div>
-                  <p class="text-left">2019 - 2020</p>
-                  <p class="text-left">
-                    viraland company - web developer(back-end)
-                  </p>
-                </div>
-              </li>
-              <li class="step step-primary">
-                <div>
-                  <p class="text-left">2020 - 2023</p>
-                  <p class="text-left">
-                    viraland company - web developer(back-end & front-end)
-                  </p>
-                </div>
-              </li>
-              <li class="step step-primary">
-                <div>
-                  <p class="text-left">2023 - ...</p>
-                  <p class="text-left">
-                    freelancer - web developer(back-end & front-end)
-                  </p>
-                </div>
-              </li>
-            </ul>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <ul class="steps steps-vertical">
+                <li class="step step-primary">
+                  <div>
+                    <p class="text-left">2018 - 2019</p>
+                    <p class="text-left">freelancer - web developer(back-end)</p>
+                  </div>
+                </li>
+                <li class="step step-primary">
+                  <div>
+                    <p class="text-left">2019 - 2020</p>
+                    <p class="text-left">
+                      viraland company - web developer(back-end)
+                    </p>
+                  </div>
+                </li>
+                <li class="step step-primary">
+                  <div>
+                    <p class="text-left">2020 - 2023</p>
+                    <p class="text-left">
+                      viraland company - web developer(back-end & front-end)
+                    </p>
+                  </div>
+                </li>
+                <li class="step step-primary">
+                  <div>
+                    <p class="text-left">2023 - ...</p>
+                    <p class="text-left">
+                      freelancer - web developer(back-end & front-end)
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet dolores quod quia minima quisquam in nihil quis eligendi, est vel atque dolore iure repellat cumque esse ea ullam tenetur.</p>
+            </div>
           </div>
         </div>
-        <div class="w-full mb-16">
+        <div class="w-full mb-16 h-screen" id="Skills">
           <div class="text-center mb-8">
             <span class="text-4xl text-center border-b-4 border-blue-800"
               >My Skills</span
             >
           </div>
-          <div class="md:grid grid-cols-2 gap-3">
-            <div>
+          <div class="text-center">
+            <div class="mb-4">
               <h1>
                 During this time, according to the projects that were being
                 done, I tried to learn the required skills well and be a helper.
               </h1>
             </div>
-            <div class="grid grid-cols-3 md:grid-cols-6 gap-2">
-              <div>
-                <div class="radial-progress" style="--value: 100" title="html">
-                  HTML
+            <div class="grid grid-cols-4 gap-10">
+              <div class="card bg-base-200 shadow-lg hover:shadow-[#484C89] transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-[#484C89] transition-all duration-700">Php</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div class="radial-progress" style="--value: 100" title="css">
-                  CSS
+              <div class="card bg-base-200 shadow-lg hover:shadow-[#f55247] transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-[#f55247] transition-all duration-700">Laravel</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div
-                  class="radial-progress"
-                  style="--value: 80"
-                  title="javascript"
-                >
-                  Js
+              <div class="card bg-base-200 shadow-lg hover:shadow-secondary transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-secondary transition-all duration-700">Livewire</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div class="radial-progress" style="--value: 80" title="php">
-                  PHP
+              <div class="card bg-base-200 shadow-lg hover:shadow-[#f0db4f] transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-[#f0db4f] transition-all duration-700">Javascript</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div
-                  class="radial-progress"
-                  style="--value: 100"
-                  title="bootstrap"
-                >
-                  BS
+              <div class="card bg-base-200 shadow-lg hover:shadow-[#61dbfb] transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-[#61dbfb] transition-all duration-700">ReactJs</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div
-                  class="radial-progress"
-                  style="--value: 100"
-                  title="tailwindcss"
-                >
-                  TW
+              <div class="card bg-base-200 shadow-lg hover:shadow-sky-400 transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-sky-400 transition-all duration-700">Jquery</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div class="radial-progress" style="--value: 90" title="jquery">
-                  JQ
+              <div class="card bg-base-200 shadow-lg hover:shadow-sky-300 transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-sky-300 transition-all duration-700">Tailwindcss</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div class="radial-progress" style="--value: 60" title="react">
-                  RC
+              <div class="card bg-base-200 shadow-lg hover:shadow-[#563d7c] transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-[#563d7c] transition-all duration-700">Bootstrap</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div
-                  class="radial-progress"
-                  style="--value: 70"
-                  title="laravel"
-                >
-                  LA
+              <div class="card bg-base-200 shadow-lg hover:shadow-[#e34c26] transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-[#e34c26] transition-all duration-700">Html</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div
-                  class="radial-progress"
-                  style="--value: 90"
-                  title="livewire"
-                >
-                  LI
+              <div class="card bg-base-200 shadow-lg hover:shadow-[#264de4] transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-[#264de4] transition-all duration-700">Css</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
-              <div>
-                <div
-                  class="radial-progress"
-                  style="--value: 90"
-                  title="wordpress"
-                >
-                  WP
+              <div class="card bg-base-200 shadow-lg hover:shadow-[#21759b] transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-[#21759b] transition-all duration-700">Wordpress</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                </div>
+              </div>
+              <div class="card bg-base-200 shadow-lg hover:shadow-[#ffde57] transition-all duration-500 group hover:-mt-3">
+                <div class="card-body">
+                  <h2 class="text-center text-2xl font-semibold group-hover:text-[#ffde57] transition-all duration-700">Python</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="w-full mb-16">
+        <div class="w-full mb-16 h-screen" id="Portfolio">
           <div class="text-center mb-8">
             <span class="text-4xl text-center border-b-4 border-blue-800"
               >My portfolio</span
             >
           </div>
-          <div class="flex flex-col p-3 md:p-0 md:grid grid-cols-3 gap-2">
+          <div class="flex flex-col p-3 md:p-0 md:grid grid-cols-3 gap-5">
             <div
-              class="max-w-lg relative bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl group"
+              class="max-w-lg relative bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl transition-all duration-500 hover:rounded-3xl group"
             >
               <div class="absolute top-0 left-0 w-full p-8">
                 <div>
@@ -280,13 +225,10 @@
                     the country and registering volunteers
                   </p>
                 </div>
-                <div class="mt-4 flex justify-end">
-                  <button class="btn btn-primary">SHOW WEBSITE</button>
-                </div>
               </div>
             </div>
             <div
-              class="max-w-lg relative h-52 bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl group"
+              class="max-w-lg relative h-52 bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl transition-all duration-500 hover:rounded-3xl group"
             >
               <div class="absolute top-0 left-0 w-full p-8">
                 <div>
@@ -298,7 +240,7 @@
               </div>
             </div>
             <div
-              class="max-w-lg relative h-52 bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl group"
+              class="max-w-lg relative h-52 bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl transition-all duration-500 hover:rounded-3xl group"
             >
               <div class="absolute top-0 left-0 w-full p-8">
                 <div>
@@ -307,16 +249,13 @@
                 <div class="mt-4">
                   <p>A website for selling cashmere products</p>
                 </div>
-                <div class="mt-4 flex justify-end">
-                  <button class="btn btn-primary">SHOW WEBSITE</button>
-                </div>
               </div>
             </div>
             <div
-              class="max-w-lg relative h-52 bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl group"
+              class="max-w-lg relative h-52 bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl transition-all duration-500 hover:rounded-3xl group"
             >
               <div
-                class="absolute h-64 top-0 left-0 w-full p-8 bg-black bg-opacity-50"
+                class="absolute h-64 top-0 left-0 w-full p-8  bg-opacity-50"
               >
                 <div>
                   <h1 class="text-3xl">GlobalGameJam</h1>
@@ -327,16 +266,13 @@
                     the country and registering volunteers
                   </p>
                 </div>
-                <div class="mt-4 flex justify-end">
-                  <button class="btn btn-primary">SHOW WEBSITE</button>
-                </div>
               </div>
             </div>
             <div
-              class="max-w-lg relative h-52 bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl group"
+              class="max-w-lg relative h-52 bg-base-200 overflow-hidden flex justify-center items-center rounded-2xl transition-all duration-500 hover:rounded-3xl group"
             >
               <div
-                class="absolute h-64 top-0 left-0 w-full p-8 bg-black bg-opacity-50"
+                class="absolute h-64 top-0 left-0 w-full p-8  bg-opacity-50"
               >
                 <div>
                   <h1 class="text-3xl">Event management</h1>
@@ -351,7 +287,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full mb-16">
+        <div class="w-full mb-16 h-screen" id="Contact">
           <div class="mockup-window border bg-base-300">
             <div class=" px-4 py-16 bg-base-200">
               <form action="https://formspree.io/f/mrgwerja" method="POST" class="flex flex-col items-center justify-center w-full">
@@ -378,7 +314,7 @@
       </div>
     </div>
 
-    <details class="dropdown mb-32 absolute top-0 left-0">
+    <details class="dropdown mb-32 absolute top-20 left-0">
         <summary class="m-1 btn">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
@@ -395,10 +331,27 @@
         </ul>
       </details>
 
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
       <script>
         function change_theme(p) {
             document.documentElement.setAttribute("data-theme",p);
         }
+
+        var hello = new Typed('#hello_write', {
+          strings: [
+            "Hello I'm",
+          ],
+          typeSpeed: 50,
+          smartBackspace: false,
+        });
+
+        var typed = new Typed('#write', {
+          strings: [
+            'I am 23 years old, I have been working in the web field for almost 5 years. I like reading books, listening to music, playing games, socializing with people. I hope I can help you .',
+          ],
+          typeSpeed: 50,
+          smartBackspace: false,
+        });
       </script>
   </body>
 </html>
