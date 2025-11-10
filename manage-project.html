@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Manager - Amirhossein Bashizade</title>
+    <meta name="description" content="Manage the project entries that appear on Amirhossein Bashizade's personal website.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+    <div class="fixed inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-primary-950 opacity-50 -z-10"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)] -z-10"></div>
+
+    <div class="container mx-auto px-4 py-10 max-w-6xl">
+        <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
+            <div>
+                <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                    Project Manager
+                </h1>
+                <p class="text-gray-300 mt-2 text-sm md:text-base leading-relaxed">
+                    Use this page to add, edit, and reorder the projects shown on the homepage. When you are done, save the updated <code>data/projects.json</code> file and commit it to your repository.
+                </p>
+            </div>
+            <div class="flex gap-3">
+                <a href="index.html" class="px-4 py-2 bg-gray-800/70 border border-gray-700 rounded-lg hover:bg-gray-800 transition-all duration-200">Back to site</a>
+                <button id="toggle-theme" class="px-4 py-2 bg-primary-600 rounded-lg font-semibold hover:bg-primary-700 transition-all duration-200">
+                    Toggle theme
+                </button>
+            </div>
+        </header>
+
+        <section class="grid gap-6 lg:grid-cols-3">
+            <div class="lg:col-span-1 space-y-6">
+                <article class="bg-gray-900/60 border border-gray-800 rounded-2xl p-6 backdrop-blur-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-primary-300">How to update your projects</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        All edits happen locally in your browser. To publish them, export the JSON file and overwrite <code>data/projects.json</code> in your repository.
+                    </p>
+                    <ul class="mt-4 space-y-3 text-sm text-gray-400 leading-relaxed">
+                        <li class="flex gap-2">
+                            <span class="text-secondary-300 font-semibold">1.</span>
+                            For the latest data, open this page over a local web server (for example <code>python -m http.server</code>) and click “Reload from site file”.
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-secondary-300 font-semibold">2.</span>
+                            Supply both a cover image and a scrolling screenshot for each project to get the hover preview effect, then download or save the updated JSON and replace the file in your repo.
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-secondary-300 font-semibold">3.</span>
+                            You can re-import the JSON to double-check everything before committing.
+                        </li>
+                    </ul>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <button id="reload-local-json" type="button" class="px-4 py-2 bg-secondary-600 hover:bg-secondary-700 rounded-lg font-semibold transition-all duration-200 w-full md:w-auto">
+                            Reload from site file
+                        </button>
+                        <button id="download-json" type="button" class="px-4 py-2 bg-gray-800 border border-gray-700 hover:border-gray-600 rounded-lg transition-all duration-200 w-full md:w-auto">
+                            Download JSON
+                        </button>
+                        <button id="save-local-json" type="button" class="px-4 py-2 bg-gray-800 border border-gray-700 hover:border-gray-600 rounded-lg transition-all duration-200 w-full md:w-auto">
+                            Save to file (experimental)
+                        </button>
+                        <label class="w-full md:w-auto">
+                            <span class="px-4 py-2 inline-block bg-gray-800 border border-gray-700 hover:border-gray-600 rounded-lg transition-all duration-200 cursor-pointer text-center">
+                                Import JSON
+                            </span>
+                            <input id="import-json" type="file" accept="application/json" class="hidden">
+                        </label>
+                    </div>
+                    <div id="file-protocol-warning" class="hidden mt-4 text-sm bg-yellow-900/30 border border-yellow-700/60 text-yellow-200 rounded-lg px-4 py-3 leading-relaxed">
+                        You are currently viewing this page via the <code>file://</code> protocol. Browsers block direct reads in this mode. Run a local web server or use the import/download buttons instead.
+                    </div>
+                </article>
+
+                <article class="bg-gray-900/60 border border-gray-800 rounded-2xl p-6 backdrop-blur-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-primary-300">Add a new project</h2>
+                    <form id="project-form" class="space-y-4">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1" for="project-title">Title</label>
+                            <input id="project-title" type="text" required class="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary-500" placeholder="e.g. Project Management Platform">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1" for="project-description">Description</label>
+                            <textarea id="project-description" rows="3" required class="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary-500" placeholder="Provide a short overview of the project"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1" for="project-image">Image path</label>
+                            <input id="project-image" type="text" class="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary-500" placeholder="assets/images/portfolios/sample.png">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1" for="project-screenshot">Screenshot path (hover)</label>
+                            <input id="project-screenshot" type="text" class="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary-500" placeholder="assets/images/screenshots/sample.png">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1" for="project-tags">Tags (comma separated)</label>
+                            <input id="project-tags" type="text" class="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary-500" placeholder="Django, Vue.js, PostgreSQL">
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-1">
+                                <label class="block text-sm text-gray-400 mb-1" for="project-live">Live URL</label>
+                                <input id="project-live" type="url" class="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary-500" placeholder="https://example.com">
+                            </div>
+                            <div class="flex-1">
+                                <label class="block text-sm text-gray-400 mb-1" for="project-repo">Repository URL</label>
+                                <input id="project-repo" type="url" class="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary-500" placeholder="https://github.com/user/repo">
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full px-4 py-2 bg-secondary-600 hover:bg-secondary-700 rounded-lg font-semibold transition-all duration-200">
+                            Add project
+                        </button>
+                    </form>
+                </article>
+            </div>
+
+            <div class="lg:col-span-2">
+                <article class="bg-gray-900/60 border border-gray-800 rounded-2xl p-6 backdrop-blur-sm h-full flex flex-col">
+                    <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                        <h2 class="text-xl font-semibold text-primary-300">Project list</h2>
+                        <div class="flex items-center gap-3">
+                            <span id="project-count" class="text-sm text-gray-400">0 projects</span>
+                            <span id="pending-indicator" class="hidden text-xs text-yellow-200 bg-yellow-900/30 border border-yellow-700/60 rounded-full px-3 py-1">
+                                Unsaved changes
+                            </span>
+                        </div>
+                    </div>
+                    <div id="feedback" class="hidden mb-4 text-sm rounded-lg px-4 py-3"></div>
+                    <div id="project-list" class="space-y-4 overflow-y-auto pr-1 custom-scrollbar" style="max-height: 70vh;">
+                        <div class="text-center text-gray-400 border border-dashed border-gray-700 rounded-2xl p-10">
+                            No projects found yet. Use the form on the left or import a JSON file to get started.
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="manage-project.js"></script>
+</body>
+</html>
+

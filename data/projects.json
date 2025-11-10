@@ -1,0 +1,71 @@
+[
+  {
+    "id": "favex",
+    "title": "Favex",
+    "description": "An organizational platform for recording and reporting events held in the province.",
+    "image": "assets/images/portfolios/favex.jpg",
+    "screenshot": "assets/images/portfolios/favex-sc.jpg",
+    "tags": [
+      "php",
+      "laravel",
+      "tailwind"
+    ],
+    "liveUrl": "",
+    "repoUrl": ""
+  },
+  {
+    "id": "global-game-jam",
+    "title": "Global Game Jam Hub",
+    "description": "One-stop hub for managing teams, submissions, and mentor resources during the Global Game Jam.",
+    "image": "assets/images/portfolios/globalgamejam.png",
+    "screenshot": "assets/images/portfolios/gamejam-sc.png",
+    "tags": [
+      "wordpress",
+      "elementor"
+    ],
+    "liveUrl": "",
+    "repoUrl": ""
+  },
+  {
+    "id": "termeh-khojasteh",
+    "title": "Termeh Khojasteh",
+    "description": "Elegant e-commerce experience for handmade Persian handicrafts with localized checkout and CMS integration.",
+    "image": "assets/images/portfolios/termehkhojasteh.png",
+    "screenshot": "assets/images/portfolios/termeh-sc.png",
+    "tags": [
+      "WordPress",
+      "WooCommerce",
+      "elementor"
+    ],
+    "liveUrl": "https://termehkhojasteh.com",
+    "repoUrl": ""
+  },
+  {
+    "id": "ferdosi-academy",
+    "title": "ferdosi-academy",
+    "description": "A website for selling language class training courses",
+    "image": "assets/images/portfolios/ferdowsi.png",
+    "screenshot": "assets/images/portfolios/ferdowsi-sc.png",
+    "tags": [
+      "wordpress",
+      "WooCommerce",
+      "elementor",
+      "custom plugins"
+    ],
+    "liveUrl": "https://ferdosi-academy.ir/",
+    "repoUrl": ""
+  },
+  {
+    "id": "portfolio",
+    "title": "portfolio",
+    "description": "Personal website to display completed work and a dedicated panel to manage your portfolio",
+    "image": "assets/images/portfolios/portfolio.png",
+    "screenshot": "assets/images/portfolios/portfolio-sc.png",
+    "tags": [
+      "js",
+      "tailwindcss"
+    ],
+    "liveUrl": "https://bashizade.github.io/",
+    "repoUrl": "https://github.com/bashizade/bashizade.github.io"
+  }
+]

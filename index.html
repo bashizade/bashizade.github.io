@@ -1,93 +1,377 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cupcake">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amirhosein Bashizade</title>
-    <link rel="stylesheet" href="./assets/output.css" />
-  </head>
-  <body>
-    <div class="max-w-xl mx-auto p-2">
-      <div class="flex items-center justify-between">
-        <div class="dropdown">
-        <div tabindex="0" role="button" class="btn m-1">
-          Theme
-          <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path></svg>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amirhossein Bashizade - Web Developer Portfolio</title>
+    <meta name="description" content="Experienced Web Developer with 6 years of expertise in Python, Django, Vue.js, and more">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#172554'
+                        },
+                        secondary: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'slide-in': 'slideIn 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'bounce-slow': 'bounce 3s infinite'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-950 text-gray-100 dark overflow-x-hidden">
+    
+    <!-- Background Gradient -->
+    <div class="fixed inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-primary-950 opacity-50 -z-10"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)] -z-10"></div>
+    
+    <!-- Navigation Component -->
+    <custom-navbar></custom-navbar>
+    
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative px-4">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-950/20"></div>
+        <div class="container mx-auto relative z-10">
+            <div class="text-center animate-fade-in">
+                <div class="mb-8 relative inline-block">
+                    <div class="absolute inset-0 bg-primary-500/20 blur-3xl rounded-full animate-pulse"></div>
+                    <div class="relative bg-gradient-to-br from-primary-600 to-secondary-600 rounded-full p-1 shadow-2xl">
+                        <div class="bg-gray-950 rounded-full p-1">
+                            <img src="https://avatars.githubusercontent.com/u/49550675?v=4" alt="Amirhossein Bashizade" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover">
+                        </div>
+                    </div>
+                </div>
+<h1 class="text-4xl md:text-6xl lg:text-7xl bg-gradient-to-r from-[#3b82f6] to-[#22c55e] bg-clip-text text-transparent mb-4">
+                    Amirhossein Bashizade
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-6">Full Stack Web Developer</p>
+                <div class="flex items-center justify-center gap-2 mb-8">
+                    <span class="px-4 py-2 bg-primary-600/20 border border-primary-500/30 rounded-full text-primary-300 text-sm backdrop-blur-sm">
+                        6 Years Experience
+                    </span>
+                    <span class="px-4 py-2 bg-secondary-600/20 border border-secondary-500/30 rounded-full text-secondary-300 text-sm backdrop-blur-sm">
+                        Available for Hire
+                    </span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <span class="px-3 py-1 bg-gray-800/50 rounded-lg text-sm text-gray-300 backdrop-blur-sm">Python</span>
+                    <span class="px-3 py-1 bg-gray-800/50 rounded-lg text-sm text-gray-300 backdrop-blur-sm">Django</span>
+                    <span class="px-3 py-1 bg-gray-800/50 rounded-lg text-sm text-gray-300 backdrop-blur-sm">Vue.js</span>
+                    <span class="px-3 py-1 bg-gray-800/50 rounded-lg text-sm text-gray-300 backdrop-blur-sm">TailwindCSS</span>
+                    <span class="px-3 py-1 bg-gray-800/50 rounded-lg text-sm text-gray-300 backdrop-blur-sm">WordPress</span>
+                    <span class="px-3 py-1 bg-gray-800/50 rounded-lg text-sm text-gray-300 backdrop-blur-sm">Docker</span>
+                    <span class="px-3 py-1 bg-primary-800/30 rounded-lg text-sm text-primary-300 backdrop-blur-sm">Local LLMs</span>
+                </div>
+                <div class="flex gap-4 justify-center">
+                    <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-primary-600 to-primary-700 rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5">
+                        Get In Touch
+                    </a>
+                    <a href="#projects" class="px-8 py-3 border border-gray-700 rounded-lg font-semibold hover:bg-gray-800/50 transition-all duration-300 hover:border-gray-600">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-16 animate-bounce-slow">
+                <i data-feather="chevron-down" class="w-6 h-6 mx-auto text-gray-500"></i>
+            </div>
         </div>
-        <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
-          <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="cupcake" value="cupcake"/></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="light" value="light"/></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="dark" value="dark"/></li>
-        </ul>
-      </div>
-      <div>
-        <span>Fa</span>
-        <span>
-          <input type="checkbox" checked onclick="window.location = 'index-fa.html'" class="toggle toggle-lg" />
-        </span>
-        <span>En</span>
-      </div>
-      </div>
-      <div class="mb-5 mt-24">
-        <img
-          src="https://avatars.githubusercontent.com/u/49550675?v=4"
-          alt="profile=img"
-          class="rounded-full w-64 outline outline-offset-1 outline-2 mx-auto"
-        />
-      </div>
-      <div>
-        <h1 class="text-4xl md:text-5xl text-center">Hello👋</h1>
-      </div>
-      <div class="mb-5">
-        <h1 class="text-3xl md:text-4xl text-center">I'm Amirhosein Bashizade</h1>
-        <p class="text-center mt-2 opacity-80">
-          <span><a target="_blank" href="https://www.linkedin.com/in/bashizadedev">Linkedin</a></span> | 
-          <span><a target="_blank" href="https://github.com/bashizade">Github</a></span> | 
-          <span><a target="_blank" href="https://instagram.com/bashizade.dev?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">Instagram</a></span>
-        </p>
-      </div>
-      <div class="mb-5">
-        <h1 class="text-left text-2xl md:text-3xl mb-2">😉About Me</h1>
-        <p class="text-left opacity-80">
-          Amirhossein Bashizadeh | Web Developer</br>
-
-          ✅ 6 Years of Experience in Web Design and Programming
-          Expertise in PHP (Laravel, Livewire), Python (Django), JavaScript (Vue.js, Alpine.js), Tailwind CSS, WordPress, Elementor
-        </br>
-          ✅ Experience in Financial Markets and Trading
-          Active in technical analysis and trading strategies
-        </br>
-          ✅ History of Teamwork and Entrepreneurship
-          Co-founder of Viraland Company | Strong spirit in teamwork and managing web development projects
-        </br>
-          🎯Interested in innovation, digital product development, and creating creative solutions in technology and e-commerce
-        </p>
-      </div>
-      <div class="mb-5">
-        <h1 class="text-left text-2xl md:text-3xl">💻My Skills</h1>
-        <p class="text-left opacity-80 text-sm md:text-base">Back-end : Python(Django,DjangoRest)</p>
-        <p class="text-left opacity-80 text-sm md:text-base">Front-end : Javascript(Vuejs,alpin,jquery)</p>
-        <p class="text-left opacity-80 text-sm md:text-base">CMS : Wordpress(Elementor)</p>
-        <p class="text-left opacity-80 text-sm md:text-base">UI : Tailwind</p>
-        <p class="text-left opacity-80 text-sm md:text-base">Linux | Network+ </p>
-      </div>
-      <div class="mb-5">
-        <h1 class="text-left text-2xl md:text-3xl">🗂Portfolio</h1>
-        <p class="text-left opacity-80 text-sm md:text-base"><span><a href="./projects/ferdowsi-academy.html" target="_blank">Ferdowsi-Academy</a></span> (CMS | Wordpress)</p>
-        <p class="text-left opacity-80 text-sm md:text-base"><span><a href="./projects/cafedigital-yazd.html" target="_blank">cafedigital-yazd</a></span> (CMS | Wordpress)</p>
-        <p class="text-left opacity-80 text-sm md:text-base"><span><a href="./projects/Favex-adminpanel.html" target="_blank">Favex</a></span> (full-stack | php-laravel-livewire)</p>
-        <p class="text-left opacity-80 text-sm md:text-base"><span><a href="./projects/ziafat-adminpanel.html" target="_blank">Ziafat</a></span> (full-stack | php-laravel-livewire)</p>
-        <p class="text-left opacity-80 text-sm md:text-base"><span><a href="./projects/AmiriFinance-academy.html" target="_blank">AmiriFinance-Academy</a> (CMS | Wordpress)</span></p>
-        <p class="text-left opacity-80 text-sm md:text-base"><span><a href="./projects/globalgamejam.html" target="_blank">GlobalGameJam</a> (CMS | Wordpress)</span></p>
-      </div>
-      <div class="mb-5">
-        <h1 class="text-left text-2xl md:text-3xl">📞Contact Me</h1>
-        <p class="text-left opacity-80">
-          <span><a target="_blank" href="https://www.linkedin.com/in/bashizadedev">Linkedin</a></span> | 
-          <span><a target="_blank" href="https://github.com/bashizade">Github</a></span> | 
-          <span><a target="_blank" href="https://instagram.com/bashizade.dev?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">Instagram</a></span>
-        </p>
-      </div>
-    </div>
-  </body>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                About Me
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        Hi! I'm Amirhossein Bashizade, a passionate web developer with <span class="text-primary-400 font-semibold">6 years of professional experience</span> in crafting robust web applications. I specialize in full-stack development with expertise in modern frameworks and cutting-edge technologies.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        My journey in web development has allowed me to work on diverse projects, from enterprise-level applications built with Django and DRF to dynamic frontend experiences using Vue.js. I'm particularly passionate about <span class="text-secondary-400 font-semibold">working with Local LLMs</span> and exploring the intersection of AI and web development.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6 mt-8">
+                        <div class="space-y-3">
+                            <h3 class="text-xl font-semibold text-primary-400 mb-3">Core Competencies</h3>
+                            <div class="flex items-center gap-2">
+                                <i data-feather="check-circle" class="w-4 h-4 text-green-500"></i>
+                                <span class="text-gray-300">Backend Architecture</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-feather="check-circle" class="w-4 h-4 text-green-500"></i>
+                                <span class="text-gray-300">Frontend Development</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-feather="check-circle" class="w-4 h-4 text-green-500"></i>
+                                <span class="text-gray-300">WordPress Custom Development</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-feather="check-circle" class="w-4 h-4 text-green-500"></i>
+                                <span class="text-gray-300">AI Integration</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="text-xl font-semibold text-secondary-400 mb-3">Specializations</h3>
+                            <div class="flex items-center gap-2">
+                                <i data-feather="zap" class="w-4 h-4 text-yellow-500"></i>
+                                <span class="text-gray-300">Local LLM Implementation</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-feather="zap" class="w-4 h-4 text-yellow-500"></i>
+                                <span class="text-gray-300">REST API Development</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-feather="zap" class="w-4 h-4 text-yellow-500"></i>
+                                <span class="text-gray-300">Component-Based Design</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-feather="zap" class="w-4 h-4 text-yellow-500"></i>
+                                <span class="text-gray-300">Performance Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-gradient-to-b from-gray-950 to-gray-900/50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-[#3b82f6] to-[#22c55e] bg-clip-text text-transparent">
+                Technical Skills
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="skill-card bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-primary-600/20 rounded-lg flex items-center justify-center">
+                            <i data-feather="code" class="w-6 h-6 text-primary-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Backend</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">Python</span>
+                            <div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">Django</span>
+                            <div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">Django REST</span>
+                            <div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-secondary-500/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-secondary-600/20 rounded-lg flex items-center justify-center">
+                            <i data-feather="monitor" class="w-6 h-6 text-secondary-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Frontend</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">JavaScript</span>
+                            <div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">Vue.js</span>
+                            <div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-full" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">TailwindCSS</span>
+                            <div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center">
+                            <i data-feather="server" class="w-6 h-6 text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">WordPress</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">WordPress Dev</span>
+                            <div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">Elementor</span>
+                            <div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">Custom Themes</span>
+                            <div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-green-500/50 transition-all duration-300 hover:-translate-y-1 lg:col-span-3">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center animate-pulse">
+                            <i data-feather="cpu" class="w-6 h-6 text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-green-400">AI & Machine Learning</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-gray-300 mb-2">Local LLMs</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-900/30 border border-green-700/50 rounded-full text-xs text-green-300">Model Deployment</span>
+                                <span class="px-3 py-1 bg-green-900/30 border border-green-700/50 rounded-full text-xs text-green-300">Fine-tuning</span>
+                                <span class="px-3 py-1 bg-green-900/30 border border-green-700/50 rounded-full text-xs text-green-300">API Integration</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-gray-300 mb-2">AI Integration</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-900/30 border border-green-700/50 rounded-full text-xs text-green-300">Chatbots</span>
+                                <span class="px-3 py-1 bg-green-900/30 border border-green-700/50 rounded-full text-xs text-green-300">Content Generation</span>
+                                <span class="px-3 py-1 bg-green-900/30 border border-green-700/50 rounded-full text-xs text-green-300">Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-[#3b82f6] to-[#22c55e] bg-clip-text text-transparent">
+                Featured Projects
+            </h2>
+            <div id="projects-loading" class="flex justify-center items-center py-12 text-gray-400">
+                <span class="animate-pulse">Loading projects…</span>
+            </div>
+            <div id="projects-error" class="hidden text-center text-red-400 bg-red-900/20 border border-red-800/60 rounded-xl p-4 max-w-3xl mx-auto">
+                Something went wrong while loading projects. Please refresh the page or double-check the data using the project manager.
+            </div>
+            <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"></div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gradient-to-b from-gray-950 to-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-[#3b82f6] to-[#22c55e] bg-clip-text text-transparent">
+                Let's Connect
+            </h2>
+            <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
+                <p class="text-center text-gray-300 mb-8 text-lg">
+                    I'm always interested in hearing about new opportunities and exciting projects.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <a href="mailto:bashizade.developer@gmail.com" class="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors">
+                        <div class="w-10 h-10 bg-primary-600/20 rounded-lg flex items-center justify-center">
+                            <i data-feather="mail" class="w-5 h-5 text-primary-400"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">Email</p>
+                            <p class="text-gray-200">bashizade.developer@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/bashizade" class="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors">
+                        <div class="w-10 h-10 bg-secondary-600/20 rounded-lg flex items-center justify-center">
+                            <i data-feather="github" class="w-5 h-5 text-secondary-400"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">GitHub</p>
+                            <p class="text-gray-200">github.com/bashizade</p>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/bashizade.dev" class="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors">
+                        <div class="w-10 h-10 bg-purple-600/20 rounded-lg flex items-center justify-center">
+                            <i data-feather="linkedin" class="w-5 h-5 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">LinkedIn</p>
+                            <p class="text-gray-200">linkedin.com/in/bashizade.dev</p>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg">
+                        <div class="w-10 h-10 bg-green-600/20 rounded-lg flex items-center justify-center">
+                            <i data-feather="map-pin" class="w-5 h-5 text-green-400"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">Location</p>
+                            <p class="text-gray-200">Remote Available | live in Iran/yazd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="./assets/images/resume.pdf" class="px-8 py-3 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg font-semibold hover:from-primary-700 hover:to-secondary-700 transition-all duration-300 shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5">
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Component -->
+    <custom-footer></custom-footer>
+    
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        if (window.feather && typeof window.feather.replace === 'function') {
+            feather.replace();
+        } else {
+            console.warn('Feather icons library failed to load.');
+        }
+    </script>
+</body>
 </html>
